@@ -1,0 +1,21 @@
+<h1> Mettre en majuscule</h1>
+<!-- <input type="text"> -->
+<br><br>
+<input id="nomVariable" value="toto"/>
+<br><br>
+<button onclick="affiche()">GO</button>
+<h2 id="demo">Rien</h2>
+<script>
+function affiche(){
+    console.log('ok');
+    // lecture du champ input
+    let nom = document.getElementById('nomVariable').value;
+    // vider le champ input
+    document.getElementById('nomVariable').value ='';
+    // traitement
+    nom = nom.toUpperCase();
+
+    // afficher le nom
+    document.getElementById('demo').innerHTML = nom;
+}
+</script>

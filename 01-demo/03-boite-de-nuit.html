@@ -1,0 +1,28 @@
+<h1> Videur</h1>
+<br><br>
+<input id="age" placeholder="Votre age"/>
+<br><br>
+<button onclick="affiche()">GO</button>
+<h2 id="demo">Rien</h2>
+<script>
+function affiche(){
+    
+    // lecture du champ input
+    let age = document.getElementById('age').value;
+    // vider le champ input
+    document.getElementById('age').value ='';
+    // traitement
+    let info='';
+    if (age < 18){
+        info= 'NO GO';
+    }
+    else if  (age >= 18){
+        info = 'gOOOOOD';
+    }else{
+        info='???';
+    }
+
+    // afficher le nom
+    document.getElementById('demo').innerHTML = info;
+}
+</script>
